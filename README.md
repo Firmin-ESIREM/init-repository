@@ -1,6 +1,6 @@
-# Init ESIREM repositories
+# Initialisation des dépôts de code pour les projets ESIREM
 
-This is a Rust script that aims at initializing quickly Git repositories for ESIREM works.
+Ce script développé en Rust permet d’initialiser facilement les dépôts de code Git pour les projets dans le cadre de mes études à l’ESIREM.
 
 ## __________
 

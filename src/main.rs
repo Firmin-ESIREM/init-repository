@@ -51,8 +51,8 @@ SOFTWARE.
 }
 
 fn insert_readme(year: &str) {
-    let readme_template = "# ESIREM project
-No description has yet been written.
+    let readme_template = "# Projet
+Aucune description n’a pour le moment été renseignée.
 
 ## __________
 
