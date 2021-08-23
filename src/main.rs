@@ -77,9 +77,16 @@ fn commit() {
     }
     let cmd = Command::new("git").args(["commit", "-am", "[AUTOMATIC] Initialize repository."]).stdin(Stdio::null()).stderr(Stdio::null()).stdout(Stdio::null()).status().expect("");
     if cmd.success() {
-        println!("[v] Commit done.\n\nYOUR REPOSITORY IS NOW INITIALIZED!");
+        println!("[v] Commit done.");
     } else {
         eprintln!("[x] Changes could not be committed.");
+        exit(1);
+    }
+    let cmd = Command::new("git").args(["branch", "-M", "main"]).stdin(Stdio::null()).stderr(Stdio::null()).stdout(Stdio::null()).status().expect("");
+    if cmd.success() {
+        println!("[v] Branch name defined to “main”.\n\nYOUR REPOSITORY IS NOW INITIALIZED!");
+    } else {
+        eprintln!("[x] Branch name could not be defined.");
         exit(1);
     }
 }
