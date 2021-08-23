@@ -84,7 +84,7 @@ fn commit() {
     }
     let cmd = Command::new("git").args(["branch", "-M", "main"]).stdin(Stdio::null()).stderr(Stdio::null()).stdout(Stdio::null()).status().expect("");
     if cmd.success() {
-        println!("[v] Branch name defined to “main”.\n\nYOUR REPOSITORY IS NOW INITIALIZED!");
+        println!("[v] Branch name defined to “main”.\n\nYOUR REPOSITORY IS NOW INITIALIZED FOR ESIREM WORKS!");
     } else {
         eprintln!("[x] Branch name could not be defined.");
         exit(1);
